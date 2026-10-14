@@ -24,6 +24,10 @@ jobs:
 
       # Check packages for known vulnerabilities
       - run: npm audit || true
+
+      - run:
+        name: Check code style
+        command: npm run lint
       
       # run tests!
       - run: npm run test
